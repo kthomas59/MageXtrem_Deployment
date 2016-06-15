@@ -15,5 +15,5 @@ Also log file is located at `<magento_root>/var/log/magextrem/deployment.log` an
 This module has been inspired by [git-auto-deploy](https://github.com/apalette/git-auto-deploy).
 
 Resources for bitbucket/github API :
-- [bitbucket](https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html) + [bitbucket blog](https://blog.bitbucket.org/2015/06/24/the-new-bitbucket-webhooks/) + [tutorial](http://jonathannicol.com/blog/2013/11/19/automated-git-deployments-from-bitbucket/))
+- [bitbucket](https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html) + [bitbucket blog](https://blog.bitbucket.org/2015/06/24/the-new-bitbucket-webhooks/) + [tutorial](http://jonathannicol.com/blog/2013/11/19/automated-git-deployments-from-bitbucket/)
 - [github](https://developer.github.com/webhooks/creating/)
