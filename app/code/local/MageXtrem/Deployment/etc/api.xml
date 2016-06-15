@@ -1,0 +1,32 @@
+MageXtrem_Deployment.xml<?xml version="1.0"?>
+<config>
+    <api>
+        <resources>
+            <deployment translate="title" module="magextrem_deployment">
+                <title>Deployment</title>
+                <model>magextrem_deployment/api</model>
+                <methods>
+                    <push translate="title" module="magextrem_deployment">
+                        <title>Push Deploy flag</title>
+                        <acl>deployment/push</acl>
+                    </push>
+                </methods>
+            </deployment>
+        </resources>
+        <v2>
+            <resources_function_prefix>
+                <deployment>deployment</deployment>
+            </resources_function_prefix>
+        </v2>
+        <acl>
+            <resources>
+                <deployment translate="title" module="magextrem_deployment">
+                    <title>Deployment</title>
+                    <push translate="title" module="magextrem_deployment">
+                        <title>Push Deploy flag</title>
+                    </push>
+                </deployment>
+            </resources>
+        </acl>
+    </api>
+</config>

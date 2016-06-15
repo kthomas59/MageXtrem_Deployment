@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageXtrem_Deployment>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <MageXtrem_Utils/>
+            </depends>
+        </MageXtrem_Deployment>
+    </modules>
+</config>

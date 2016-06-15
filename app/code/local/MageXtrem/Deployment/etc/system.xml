@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <magextrem_utils>
+            <groups>
+                <deployment translate="label" module="magextrem_deployment">
+                    <label>Deployment</label>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <repo_dir translate="label">
+                            <label>Repository directory</label>
+                            <comment><![CDATA[Repository directory]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </repo_dir>
+                        <web_root_dir translate="label">
+                            <label>Web root directory</label>
+                            <comment><![CDATA[Web root directory, leave empty for magento base directory]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </web_root_dir>
+                        <git_bin_path translate="label">
+                            <label>Git binary path</label>
+                            <comment><![CDATA[Fill if git binary isn't in your PHP user's bin path, otherwise let "git"]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </git_bin_path>
+                        <branch_name translate="label">
+                            <label>Branch name</label>
+                            <comment><![CDATA[Git branch name]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </branch_name>
+                        <push_type translate="label">
+                            <label>Push Type</label>
+                            <comment><![CDATA[Push type]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>magextrem_deployment/source_push_type</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </push_type>
+                        <allowed_ips translate="label">
+                            <label>Authorized Ips</label>
+                            <comment><![CDATA[Authorized Ips comma-separated]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowed_ips>
+                        <debug translate="label">
+                            <label>Debug</label>
+                            <comment><![CDATA[Debug mode]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </debug>
+                        <email translate="label">
+                            <label>Email</label>
+                            <comment><![CDATA[Deployment email alert, leave empty for no email alert]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email>
+                    </fields>
+                </deployment>
+            </groups>
+        </magextrem_utils>
+    </sections>
+</config>
