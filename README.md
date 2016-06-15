@@ -11,3 +11,5 @@ Warning, don't forget to fill correct pathes (repository directory, web root dir
 A type is defined in configuration to decide if the checkout should be done via controller or cron.
 
 Also log file is located at `<magento_root>/var/log/magextrem/deployment.log` and email addresses can be set in configuration for alerting.
+
+This module has been inspired by [git-auto-deploy](https://github.com/apalette/git-auto-deploy)
