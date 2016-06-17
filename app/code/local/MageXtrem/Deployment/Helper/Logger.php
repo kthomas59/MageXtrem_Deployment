@@ -15,4 +15,14 @@ class MageXtrem_Deployment_Helper_Logger extends MageXtrem_Utils_Helper_Logger
         $this->_filename = 'magextrem/deployment';
     }
 
+    /**
+     * @param array|string $payload
+     */
+    public function logPayload($payload) {
+        if (is_array($payload) || $payload instanceof stdClass) {
+            $payload = Zend_Json::encode($payload);
+        }
+        $this->log('payload : ' . $payload);
+    }
+
 }
