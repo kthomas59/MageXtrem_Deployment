@@ -84,6 +84,14 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </email>
+                        <payload translate="label">
+                            <label>Payload</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <sort_order>1000</sort_order>
+                        </payload>
                     </fields>
                 </deployment>
             </groups>

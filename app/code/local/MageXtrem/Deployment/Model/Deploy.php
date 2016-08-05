@@ -61,8 +61,8 @@ class MageXtrem_Deployment_Model_Deploy extends Mage_Core_Model_Abstract
      */
     public function run()
     {
-        $this->checkout()
-            ->logProcess()
+        $this->logProcess()
+            ->checkout()
             ->mailProcess()
             ->cleanPayload();
     }
@@ -87,6 +87,7 @@ class MageXtrem_Deployment_Model_Deploy extends Mage_Core_Model_Abstract
         $this->_logger->log('cd ' . $this->repo_dir . ' && ' . $this->git_bin_path . ' fetch');
         $this->_logger->log('cd ' . $this->repo_dir . ' && GIT_WORK_TREE=' . $this->web_root_dir . ' ' . $this->git_bin_path . ' checkout -f');
         $this->_logger->log('Commit : ' . $this->getCommitHash());
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class MageXtrem_Deployment_Model_Deploy extends Mage_Core_Model_Abstract
                 array_combine($this->email, $this->email)
             );
         }
+
         return $this;
     }
 
@@ -123,7 +125,9 @@ class MageXtrem_Deployment_Model_Deploy extends Mage_Core_Model_Abstract
     {
         if ($this->_helper->checkCurrentPayload()) {
             Mage::getConfig()->deleteConfig(MageXtrem_Deployment_Helper_Data::PAYLOAD_XML_PATH);
+            Mage::getConfig()->cleanCache();
         }
+        
         return $this;
     }
 

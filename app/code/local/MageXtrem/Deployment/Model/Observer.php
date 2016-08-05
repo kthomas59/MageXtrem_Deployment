@@ -23,6 +23,8 @@ class MageXtrem_Deployment_Model_Observer
     {
         if ($this->_helper->checkCurrentPayload()) {
             Mage::getModel('magextrem_deployment/deploy')->run();
+        } else {
+            Mage::helper('magextrem_deployment/logger')->log('empty payload');
         }
     }
 

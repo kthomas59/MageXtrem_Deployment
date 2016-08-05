@@ -58,6 +58,7 @@ class MageXtrem_Deployment_Model_Api extends Mage_Api_Model_Resource_Abstract
             if ($this->_helper->getPushType() == MageXtrem_Deployment_Model_Source_Push_Type::CRON_PUSH_TYPE && !$this->_helper->checkCurrentPayload()) {
                 $payload = Zend_Json::encode($payload);
                 Mage::getConfig()->saveConfig(MageXtrem_Deployment_Helper_Data::PAYLOAD_XML_PATH, $payload);
+                Mage::getConfig()->cleanCache();
                 $this->_logger->log('Scheduling CRON');
                 $this->_logger->logPayload($payload);
                 return false;

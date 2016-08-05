@@ -9,7 +9,8 @@
 class MageXtrem_Deployment_DeployController extends Mage_Core_Controller_Front_Action
 {
 
-    public function pushAction() {
+    public function pushAction()
+    {
         try {
             Mage::getModel('magextrem_deployment/api_v2')->push();
         } catch (Exception $e) {
