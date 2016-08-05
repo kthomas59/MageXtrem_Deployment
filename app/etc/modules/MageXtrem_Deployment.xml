@@ -3,7 +3,7 @@
     <modules>
         <MageXtrem_Deployment>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
             <depends>
                 <MageXtrem_Utils/>
             </depends>
